@@ -15,17 +15,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-	// Database Version
 	private static final int DATABASE_VERSION = 1;
-	// Database Name
 	private static final String DATABASE_NAME = "QuestionN5DB.sqlite";
 
-	// Questions table name
 	private static final String TABLE_NAME = "questions";
-
-	// Database path
+	// Tam Mao í very handsome
 	private static final String DATABASE_PATH = "/data/data/akari.jp.n5/databases/";
-	// Questions Table Columns names
 	private static final String ID = "id";
 	private static final String FORM = "form";
 	private static final String KIND = "kind";
