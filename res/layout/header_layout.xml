@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ActionBarCompat" >
+	
+    <ImageView
+        android:layout_width="37dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:src="@drawable/home_icon" />
+    <!-- 
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="37dp"
+        android:style=
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/btn_home" /> -->
+		
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="37dp"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="JLPT N5"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    
+</LinearLayout>

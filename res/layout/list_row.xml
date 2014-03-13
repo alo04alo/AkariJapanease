@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/txtOrder"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:background="#3b5999"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtOrder"
+        android:layout_toRightOf="@+id/txtOrder"
+        android:layout_marginLeft="5dip"
+        android:text="Question content"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+	<ImageView
+	    android:id="@+id/imgChoose"
+        android:layout_width="10dip"
+        android:layout_height="10dip"
+        android:layout_below="@id/txtQuestion"
+        android:layout_toRightOf="@+id/txtOrder"
+        android:layout_marginTop="1dip"
+        android:layout_marginLeft="5dip"
+        android:src="@drawable/choose" />
+	
+    <TextView
+        android:id="@+id/txtChoose"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtQuestion"
+        android:layout_toRightOf="@+id/imgChoose"
+        android:layout_marginTop="1dip"
+        android:layout_marginLeft="5dip"
+        android:text="Answear of user"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+    
+    <ImageView
+	    android:id="@+id/imgResult"
+        android:layout_width="10dip"
+        android:layout_height="10dip"
+        android:layout_below="@id/imgChoose"
+        android:layout_marginTop="1dip"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@+id/txtOrder"
+        android:src="@drawable/result" />
+    
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtChoose"
+        android:layout_marginTop="1dip"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@+id/imgResult"
+        android:text="Result of this question"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+   <!--  <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/question"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dip"
+        android:gravity="right"
+        android:text="5:45"
+        android:textColor="#10bcc9"
+        android:textSize="10dip"
+        android:textStyle="bold" /> -->
+
+    <ImageView
+        android:id="@+id/imgAnswer"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/duration"
+        android:src="@drawable/correct" />
+
+</RelativeLayout>
