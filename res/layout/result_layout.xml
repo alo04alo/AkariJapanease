@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="#ffffff"
     android:orientation="vertical" >
 
-    <LinearLayout style="@style/ActionBarCompat" >
+    <LinearLayout
+        style="@style/ActionBarCompat">
 
         <TextView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+    		android:layout_height="wrap_content"
             android:clickable="false"
             android:gravity="center"
             android:text="Result"
@@ -18,13 +19,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginBottom="360dp"
-        android:background="#ffffff"
-        android:orientation="vertical"
-        android:padding="2dp" >
-
-        <TextView
+    <TextView
             android:id="@+id/txtScore"
             android:layout_width="fill_parent"
             android:layout_height="60sp"
@@ -39,11 +34,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:textColor="#000000"
             android:text="Show detail"
             android:textSize="20sp" />
-    </LinearLayout>
 
-    <RelativeLayout
+    <!-- <RelativeLayout
         style="@style/ActionBarCompat"
         android:layout_gravity="bottom"
     	android:gravity="bottom" >
@@ -55,6 +50,6 @@
             android:textColor="#ffffff"
             android:textSize="20sp"
             android:textStyle="bold" />
-    </RelativeLayout>
+    </RelativeLayout> -->
 
 </LinearLayout>

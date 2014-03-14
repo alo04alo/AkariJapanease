@@ -137,11 +137,11 @@ public class Question {
 
 	public String getContentofAnswer(int id) {
 		switch (id) {
-		case 1:
+		case 0:
 			return this.getAnswer1();
-		case 2:
+		case 1:
 			return this.getAnswer2();
-		case 3:
+		case 2:
 			return this.getAnswer3();
 		default:
 			return null;
