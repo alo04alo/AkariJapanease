@@ -1,5 +1,6 @@
 package akari.jp.base;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -59,6 +60,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// Create Database at here
+
 		db.execSQL(CREATE_TABLE_QUESTIONS);
 	}
 
@@ -102,6 +104,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			checkDB.close();
 		return checkDB != null ? true : false;
 	}
+	
+	public boolean checkDatabaseExist(){
+		String myPath = DATABASE_PATH + DATABASE_NAME;
+		File file = new File(myPath);
+		if(file.exists()){
+			return true;
+		}else{
+			return false;
+		}
+		
+	}
 
 	private void copyDataBase() throws IOException {
 		InputStream myInput = ctx.getAssets().open(DATABASE_NAME);
@@ -125,7 +138,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			return myDB;
 		} catch (Exception e) {
 			// TODO: handle exception
-			Log.d(TAG, "Can't open database");
+//			Log.d(TAG, "Can't open database");
+			Debug.out("Can't open database");
 			return null;
 		}
 

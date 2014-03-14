@@ -23,8 +23,9 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.home_layout);
 		FileManager.create(getApplication());
 		database = new DatabaseHandler(this);		
-		if(database.openDataBase() == null){
+		if(database.checkDatabaseExist() == false){
 			this.insertDb();
+			Debug.out("Insert data from xls file to DB successfully");
 		}
 		Debug.out("Hello");
 		

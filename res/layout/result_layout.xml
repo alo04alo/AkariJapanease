@@ -20,36 +20,22 @@
     </LinearLayout>
 
     <TextView
-            android:id="@+id/txtScore"
-            android:layout_width="fill_parent"
-            android:layout_height="60sp"
-            android:gravity="center"
-            android:text="17"
-            android:textColor="#08088A"
-            android:textSize="40sp" />
+        android:id="@+id/txtScore"
+        android:layout_width="fill_parent"
+        android:layout_height="60sp"
+        android:gravity="center"
+        android:text="17"
+        android:textColor="#08088A"
+        android:textSize="40sp" />
 
-        <Button
-            android:id="@+id/btShowDetail"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textColor="#000000"
-            android:text="Show detail"
-            android:textSize="20sp" />
-
-    <!-- <RelativeLayout
-        style="@style/ActionBarCompat"
-        android:layout_gravity="bottom"
-    	android:gravity="bottom" >
-         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:clickable="false"
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout> -->
+    <Button
+        android:id="@+id/btShowDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000"
+        android:text="Show detail"
+        android:textSize="20sp" />
 
 </LinearLayout>
