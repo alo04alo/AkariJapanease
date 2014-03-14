@@ -1,5 +1,6 @@
 package akari.jp.base;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,12 +16,17 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
+	// Database Version
 	private static final int DATABASE_VERSION = 1;
+	// Database Name
 	private static final String DATABASE_NAME = "QuestionN5DB.sqlite";
 
+	// Questions table name
 	private static final String TABLE_NAME = "questions";
-	// Tam Mao í very handsome
+
+	// Database path
 	private static final String DATABASE_PATH = "/data/data/akari.jp.n5/databases/";
+	// Questions Table Columns names
 	private static final String ID = "id";
 	private static final String FORM = "form";
 	private static final String KIND = "kind";
@@ -53,8 +59,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		// Create Database at here
-//		db.execSQL(CREATE_TABLE_QUESTIONS);
+//		 Create Database at here
+		db.execSQL(CREATE_TABLE_QUESTIONS);
 	}
 
 	@Override
@@ -97,6 +103,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			checkDB.close();
 		return checkDB != null ? true : false;
 	}
+	
+	public boolean checkDatabaseExist(){
+		String myPath = DATABASE_PATH + DATABASE_NAME;
+		File file = new File(myPath);
+		if(file.exists()){
+			return true;
+		}else{
+			return false;
+		}
+		
+	}
 
 	private void copyDataBase() throws IOException {
 		InputStream myInput = ctx.getAssets().open(DATABASE_NAME);
@@ -120,7 +137,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			return myDB;
 		} catch (Exception e) {
 			// TODO: handle exception
-			Log.d(TAG, "Can't open database");
+//			Log.d(TAG, "Can't open database");
+			Debug.out("Can't open database");
 			return null;
 		}
 
