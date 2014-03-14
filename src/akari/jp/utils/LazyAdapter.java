@@ -7,6 +7,10 @@ import akari.jp.n5.ListViewActivity;
 import akari.jp.n5.R;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +59,8 @@ public class LazyAdapter extends BaseAdapter {
 		song = data.get(position);
 
 		txtOrder.setText(song.get(ListViewActivity.KEY_ID));
-		txtQuestion.setText(song.get(ListViewActivity.KEY_QUESTION));
+//		txtQuestion.setText(song.get(ListViewActivity.KEY_QUESTION));
+		this.setStyleText(txtQuestion, song.get(ListViewActivity.KEY_QUESTION));
 		txtResult.setText(song.get(ListViewActivity.KEY_RESULT));
 		txtChoose.setText(song.get(ListViewActivity.KEY_CHOOSE));
 		if (song.get(ListViewActivity.KEY_ICON_RESULT).equals("TRUE"))
@@ -63,5 +68,20 @@ public class LazyAdapter extends BaseAdapter {
 		else
 			imgResult.setImageResource(R.drawable.incorrect);
 		return view;
+	}
+	
+	private void setStyleText(TextView tv, String text) {
+		int start = text.indexOf(new String("<u>"));
+		int end = text.lastIndexOf( new String("<u/>")) - 3;
+		text = text.replace("<u>","");
+		text = text.replace("<u/>","");
+		Spannable wordtoSpan = new SpannableString(text);
+//		StyleSpan style = new StyleSpan(android.graphics.Typeface.ITALIC);
+//		wordtoSpan.setSpan(new UnderlineSpan(), start, end,
+//				Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+		wordtoSpan.setSpan(new ForegroundColorSpan(Color.BLUE), start, end,
+				Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+		
+		tv.setText(wordtoSpan);
 	}
 }

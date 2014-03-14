@@ -59,7 +59,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-//		 Create Database at here
+		// Create Database at here
+
 		db.execSQL(CREATE_TABLE_QUESTIONS);
 	}
 
