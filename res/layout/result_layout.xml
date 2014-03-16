@@ -27,15 +27,41 @@
         android:text="17"
         android:textColor="#08088A"
         android:textSize="40sp" />
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="fill_parent"
+        android:layout_height="60sp"
+        android:gravity="center"
+        android:text="17"
+        android:textColor="#08088A"
+        android:textSize="40sp" />
 
     <Button
-        android:id="@+id/btShowDetail"
+        android:id="@+id/btnShowDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textColor="#000000"
         android:text="Show detail"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/btnReTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000"
+        android:text="Re-Test"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000"
+        android:text="Home"
         android:textSize="20sp" />
 
 </LinearLayout>

@@ -68,6 +68,8 @@ public class MainActivity extends Activity {
 			public void onClick(View view) {
 				Intent i = new Intent(getApplicationContext(),
 						KanjiActivity.class);
+				((N5Support) getApplication()).setForm(0);
+				((N5Support) getApplication()).setKind(0);
 				startActivity(i);
 			}
 		});
@@ -78,6 +80,8 @@ public class MainActivity extends Activity {
 			public void onClick(View view) {
 				Intent i = new Intent(getApplicationContext(),
 						KatakanaActivity.class);
+				((N5Support) getApplication()).setForm(0);
+				((N5Support) getApplication()).setKind(0);
 				startActivity(i);
 			}
 		});
@@ -88,6 +92,8 @@ public class MainActivity extends Activity {
 			public void onClick(View view) {
 				Intent i = new Intent(getApplicationContext(),
 						ListeningActivity.class);
+				((N5Support) getApplication()).setForm(0);
+				((N5Support) getApplication()).setKind(0);
 				startActivity(i);
 			}
 		});
@@ -98,7 +104,9 @@ public class MainActivity extends Activity {
 			public void onClick(View view) {
 				// Launching News Feed Screen
 				Intent i = new Intent(getApplicationContext(),
-						ListViewActivity.class);
+						PracticeActivity.class);
+				((N5Support) getApplication()).setForm(0);
+				((N5Support) getApplication()).setKind(0);
 				startActivity(i);
 			}
 		});
@@ -109,6 +117,8 @@ public class MainActivity extends Activity {
 			public void onClick(View view) {
 				Intent i = new Intent(getApplicationContext(),
 						WordActivity.class);
+				((N5Support) getApplication()).setForm(0);
+				((N5Support) getApplication()).setKind(0);
 				startActivity(i);
 			}
 		});
