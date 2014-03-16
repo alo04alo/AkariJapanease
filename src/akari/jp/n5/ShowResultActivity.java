@@ -20,7 +20,7 @@ public class ShowResultActivity extends Activity {
 		setContentView(R.layout.result_layout);
 
 		txtScore = (TextView) findViewById(R.id.txtScore);
-		btShowDetail = (Button) findViewById(R.id.btShowDetail);
+		btShowDetail = (Button) findViewById(R.id.btnShowDetail);
 
 		// Intent getScore = getIntent();
 		// String score = getScore.getStringExtra("score");
