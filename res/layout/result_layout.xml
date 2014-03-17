@@ -1,67 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="20dp"
     android:background="#ffffff"
     android:orientation="vertical" >
 
     <LinearLayout
-        style="@style/ActionBarCompat">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top" >
 
-        <TextView
-            android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-            android:clickable="false"
-            android:gravity="center"
-            android:text="Result"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+        <include layout="@layout/header_result_layout" >
+        </include>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/txtScore"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="60sp"
-        android:gravity="center"
-        android:text="17"
-        android:textColor="#08088A"
-        android:textSize="40sp" />
-    <TextView
-        android:id="@+id/txtTime"
-        android:layout_width="fill_parent"
-        android:layout_height="60sp"
-        android:gravity="center"
-        android:text="17"
-        android:textColor="#08088A"
-        android:textSize="40sp" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btnShowDetail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textColor="#000000"
-        android:text="Show detail"
-        android:textSize="20sp" />
-    <Button
-        android:id="@+id/btnReTest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textColor="#000000"
-        android:text="Re-Test"
-        android:textSize="20sp" />
-    <Button
-        android:id="@+id/btnHome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textColor="#000000"
-        android:text="Home"
-        android:textSize="20sp" />
+        <include layout="@layout/result_content_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom" >
+
+        <include layout="@layout/footer_result_layout" >
+        </include>
+    </LinearLayout>
 
 </LinearLayout>

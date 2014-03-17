@@ -5,23 +5,20 @@ import akari.jp.base.DatabaseHandler;
 import akari.jp.base.Question;
 import akari.jp.base.QuestionHandler;
 import akari.jp.utils.DefineVariable;
-import android.annotation.TargetApi;
+import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
-import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -29,11 +26,12 @@ public class GrammarActivity extends Activity {
 	TextView txtQuestion;
 	TextView txtScore;
 	TextView txtTimer;
-	
+
 	Button btnShowDetailResult;
 	Button btnReTest;
-	Button btnHome;
-	
+	Button btnHome; // Result Screen
+	Button btnGoToHome; // header layout
+
 	Button btnAnswer1;
 	Button btnAnswer2;
 	Button btnAnswer3;
@@ -50,7 +48,7 @@ public class GrammarActivity extends Activity {
 	int kind;
 	int form;
 	int score;
-		
+
 	Context ctx;
 
 	@Override
@@ -58,14 +56,16 @@ public class GrammarActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.question_layout);
 		countUpTimer = new CountUpTimer();
+		count = 0;
+		ctx = this;
 		form = ((N5Support) getApplication()).getForm();
 		kind = ((N5Support) getApplication()).getKind();
 		txtQuestion = (TextView) findViewById(R.id.txt_question);
 		btnAnswer1 = (Button) findViewById(R.id.btn_result1);
 		btnAnswer2 = (Button) findViewById(R.id.btn_result2);
 		btnAnswer3 = (Button) findViewById(R.id.btn_result3);
-		count = 0;
-		ctx = this;
+		btnGoToHome = (Button) findViewById(R.id.btn_home);
+
 		defineVariable = new DefineVariable();
 		database = new DatabaseHandler(getApplication());
 		database.openDataBase();
@@ -74,6 +74,7 @@ public class GrammarActivity extends Activity {
 		nextQuestion();
 		questionHandle = new QuestionHandler(questions);
 		countUpTimer.startTimer();
+
 		btnAnswer1.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				if (question != null)
@@ -93,6 +94,13 @@ public class GrammarActivity extends Activity {
 				if (question != null)
 					question.setChoose(2);
 				nextQuestion();
+			}
+		});
+
+		btnGoToHome.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				startActivity(new Intent(getApplicationContext(),
+						MainActivity.class));
 			}
 		});
 	}
@@ -152,52 +160,53 @@ public class GrammarActivity extends Activity {
 
 	private Dialog createDialogResult() {
 		dialogShowResult = new Dialog(GrammarActivity.this);
+		dialogShowResult.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		dialogShowResult.setContentView(R.layout.result_layout);
+		dialogShowResult.setCancelable(true);
+		dialogShowResult.getWindow().setLayout(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
 
 		txtScore = (TextView) dialogShowResult.findViewById(R.id.txtScore);
-		txtTimer = (TextView)dialogShowResult.findViewById(R.id.txtTime);
-		btnShowDetailResult = (Button) dialogShowResult.findViewById(R.id.btnShowDetail);
-		btnHome = (Button)dialogShowResult.findViewById(R.id.btnHome);
-		btnReTest = (Button)dialogShowResult.findViewById(R.id.btnReTest);
-		
+		txtTimer = (TextView) dialogShowResult.findViewById(R.id.txtTime);
+		btnShowDetailResult = (Button) dialogShowResult
+				.findViewById(R.id.btnShowDetail);
+		btnHome = (Button) dialogShowResult.findViewById(R.id.btnHome);
+		btnReTest = (Button) dialogShowResult.findViewById(R.id.btnReTest);
+
 		txtScore.setText("Your score: " + score);
-		txtTimer.setText("Time: " + countUpTimer.getMinutes() + ":" + String.format("%02d", countUpTimer.getSeconds()));
-		
+		txtTimer.setText("Time: " + countUpTimer.getMinutes() + ":"
+				+ String.format("%02d", countUpTimer.getSeconds()));
+
 		btnShowDetailResult.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				startActivity(new Intent(GrammarActivity.this,
 						ListViewActivity.class));
 			}
 		});
-		
+
 		btnHome.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(getApplicationContext(), MainActivity.class));
+				startActivity(new Intent(getApplicationContext(),
+						MainActivity.class));
 			}
 		});
-		
+
 		btnReTest.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				startActivity(new Intent(ctx, GrammarActivity.class));
 			}
 		});
-		// dialogShowResult.show();
 		return dialogShowResult;
 
 	}
 
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
 		super.onBackPressed();
 		startActivity(new Intent(ctx, MainActivity.class));
 		// finishStudy();

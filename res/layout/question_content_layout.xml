@@ -1,46 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:background="#ffffff"
-	    android:orientation="vertical" >
-	
-	   <TextView
-	       android:id="@+id/txt_question"
-	       android:layout_width="fill_parent"
-	       android:layout_height="150dip"
-	       android:gravity="center"
-	       android:textColor="#000000"
-	       android:textSize="22sp"
-	       android:padding="15dip" />
-	
-	   <Button 
-	       android:id="@+id/btn_result1"
-	       android:layout_width="fill_parent"
-	       android:layout_height="wrap_content"
-	       android:layout_marginBottom="17dip"
-	       android:layout_marginLeft="20dip"
-	       android:layout_marginRight="20dip"
-	       android:textColor="#000000"
-	       android:background="@drawable/question_selector"/>
-	   
-	   <Button 
-	       android:id="@+id/btn_result2"
-	       android:layout_width="fill_parent"
-	       android:layout_height="wrap_content"
-	       android:layout_marginLeft="20dip"
-	       android:layout_marginRight="20dip"
-	       android:layout_marginBottom="17dip"
-	       android:textColor="#000000"
-	       android:background="@drawable/question_selector"/>
-	   
-	   <Button 
-	       android:id="@+id/btn_result3"
-	       android:layout_width="fill_parent"
-	       android:layout_height="wrap_content"
-	       android:layout_marginLeft="20dip"
-	       android:layout_marginRight="20dip"
-	       android:layout_marginBottom="42dip"
-	       android:textColor="#000000"
-	       android:background="@drawable/question_selector"/>
-	</LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txt_question"
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        android:gravity="center"
+        android:padding="15dip"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btn_result1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_marginBottom="17dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/question_selector"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btn_result2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_marginBottom="17dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/question_selector"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btn_result3"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_marginBottom="42dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/question_selector"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+</LinearLayout>

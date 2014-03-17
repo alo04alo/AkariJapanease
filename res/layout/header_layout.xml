@@ -2,23 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/ActionBarCompat" >
 	
-    <ImageView
-        android:layout_width="37dp"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:src="@drawable/home_icon" />
-    <!-- 
     <Button
         android:id="@+id/btn_home"
-        android:layout_width="37dp"
-        android:style=
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/btn_home" /> -->
+        style="@style/DashboardButton"
+        android:layout_marginBottom="-10dp"
+        android:drawableTop="@drawable/btn_home"/>
 		
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_marginRight="37dp"
+        android:layout_marginRight="60dp"
         android:clickable="false"
         android:gravity="center"
         android:text="JLPT N5"
