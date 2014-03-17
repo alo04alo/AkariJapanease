@@ -1,5 +1,5 @@
 package akari.jp.utils;
 
 public class DefineVariable {
-	public int MAX_QUESTION = 4;
+	public int MAX_QUESTION = 6;
 }

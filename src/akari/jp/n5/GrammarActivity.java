@@ -5,6 +5,7 @@ import akari.jp.base.DatabaseHandler;
 import akari.jp.base.Question;
 import akari.jp.base.QuestionHandler;
 import akari.jp.utils.DefineVariable;
+import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -17,6 +18,7 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -158,7 +160,10 @@ public class GrammarActivity extends Activity {
 
 	private Dialog createDialogResult() {
 		dialogShowResult = new Dialog(GrammarActivity.this);
+		dialogShowResult.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		dialogShowResult.setContentView(R.layout.result_layout);
+		dialogShowResult.setCancelable(true);
+		dialogShowResult.getWindow().setLayout(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
 
 		txtScore = (TextView) dialogShowResult.findViewById(R.id.txtScore);
 		txtTimer = (TextView) dialogShowResult.findViewById(R.id.txtTime);
