@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuestionContainer xmlns:hust="http://schemas.soict.hust.edu.vn">
+
+<Question id="0" form="1" kind="null" content="わたしの　へやは　この　(　　)　の　２かいです。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="エレベーター" />
+<Answer2 content="プール" />
+<Answer3 content="アパート" />
+<Answer4 content="" />
+</Question>
+
+<Question id="1" form="1" kind="null" content=" さとうさんは　ギターを　じょうずに　（　　）。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="うたいます　" />
+<Answer2 content="ききます" />
+<Answer3 content="ひきます　" />
+<Answer4 content="" />
+</Question>
+
+<Question id="2" form="1" kind="null" content="テーブルに　おさらと　はしを　（　　）　ください。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ならべて" />
+<Answer2 content="ならべて" />
+<Answer3 content="たべて" />
+<Answer4 content="" />
+</Question>
+
+<Question id="3" form="1" kind="null" content=" けさ　そうじを　したから　へやは　（　　）です。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="きれい　" />
+<Answer2 content="きたない" />
+<Answer3 content="あかるい" />
+<Answer4 content="" />
+</Question>
+
+<Question id="4" form="1" kind="null" content="きょうは　５００　（　　）　およぎました。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ど" />
+<Answer2 content="メートル" />
+<Answer3 content="グラム" />
+<Answer4 content="" />
+</Question>
+
+<Question id="5" form="1" kind="null" content=" えきから　たいしかんまでの　（　　）　を　かいて　ください。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ちず" />
+<Answer2 content="しゃしん" />
+<Answer3 content="てがみ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="6" form="1" kind="null" content="うるさいから　テレビを　（　　）　ください。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="けして" />
+<Answer2 content="つけて" />
+<Answer3 content="しめて　" />
+<Answer4 content="" />
+</Question>
+
+<Question id="7" form="1" kind="null" content=" きょうは　（　　）　が　ふって　います。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="くもり　　" />
+<Answer2 content="はれ　" />
+<Answer3 content="ゆき" />
+<Answer4 content="" />
+</Question>
+
+<Question id="8" form="1" kind="null" content="はこに　りんごが　（　　）　あります。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="よっつ" />
+<Answer2 content="いつつ" />
+<Answer3 content="むっつ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="9" form="1" kind="null" content="めがねは　つくえの　（　　）　に　あります。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="そば" />
+<Answer2 content="よこ" />
+<Answer3 content="うえ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="10" form="1" kind="null" content="まいばん　くにの　かぞくに　でんわします。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="よるは　ときどき　くにの　かぞくに　でんわします。" />
+<Answer2 content="あさは　ときどき　くにの　かぞくに　でんわします。" />
+<Answer3 content="よるは　いつも　くにの　かぞくに　でんわします。" />
+<Answer4 content="" />
+</Question>
+
+<Question id="11" form="1" kind="null" content=" この　まちには　ゆうめいな　たてものが　あります。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="この　まちには　ゆうめいな　ビルが　あります。" />
+<Answer2 content="この　まちには　ゆうめいな　おちゃが　あります。" />
+<Answer3 content="この　まちには　ゆうめいな　ケーキが　あります。" />
+<Answer4 content="" />
+</Question>
+
+<Question id="12" form="1" kind="null" content="その　えいがは　おもしろくなかったです。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="その　えいがは　たのしかったです。" />
+<Answer2 content="その　えいがは　つまらなかったです。" />
+<Answer3 content="その　えいがは　みじかかったです。" />
+<Answer4 content="" />
+</Question>
+
+<Question id="13" form="1" kind="null" content="にねんまえに　きょうとへ　いきました。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="きのう　きょうとへ　いきました。" />
+<Answer2 content="おととい　きょうとへ　いきました。" />
+<Answer3 content="おととし　きょうとへ　いきました。" />
+<Answer4 content="" />
+</Question>
+
+<Question id="14" form="1" kind="null" content="たんじょうびは　６がつ１５にちです。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="６がつ１５にちに　けっこんしました。" />
+<Answer2 content="６がつ１５にちに　テストが　はじまりました。" />
+<Answer3 content="６がつ１５にちに　うまれました。" />
+<Answer4 content="" />
+</Question>
+
+</QuestionContainer>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuestionContainer xmlns:hust="http://schemas.soict.hust.edu.vn">
+
+<Question id="0" form="0" kind="null" content="この　おかしは　とても　<u>高い<u/>です。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="たかい" />
+<Answer2 content="だかい" />
+<Answer3 content="たっかい" />
+<Answer4 content="" />
+</Question>
+
+<Question id="1" form="0" kind="null" content="ぜんぶで　<u>六千七百<u/>えんです。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ろっせんななひゃく" />
+<Answer2 content="ろっくせんななひゃく" />
+<Answer3 content="ろくせんななひゃっく" />
+<Answer4 content="" />
+</Question>
+
+<Question id="2" form="0" kind="null" content="<u> 新聞<u/>は　あまり　よみません。
+		" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="しぶん " />
+<Answer2 content="しんぶん " />
+<Answer3 content="しいぶん" />
+<Answer4 content="" />
+</Question>
+
+<Question id="3" form="0" kind="null" content=" あしたは　<u>雨<u/>です。
+" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="はれ " />
+<Answer2 content="あめ " />
+<Answer3 content="ゆき" />
+<Answer4 content="" />
+</Question>
+
+<Question id="4" form="0" kind="null" content=" <u>学校<u/>まで、バスで　いきます。
+" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="かっこう " />
+<Answer2 content=" がくこう ３．がっこう " />
+<Answer3 content="がっこう " />
+<Answer4 content="" />
+</Question>
+
+<Question id="5" form="0" kind="null" content=" この　ほんは　かんじが　<u>多い<u/>です。
+" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="おうい " />
+<Answer2 content="おおい " />
+<Answer3 content="おおきい" />
+<Answer4 content="" />
+</Question>
+
+<Question id="6" form="0" kind="null" content="ノートに　なまえを　かたかなで　<u>書きました<u/>。
+" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="かきました " />
+<Answer2 content="しょきました " />
+<Answer3 content="かっきました" />
+<Answer4 content="" />
+</Question>
+
+<Question id="7" form="0" kind="null" content="<u>出口<u/>は　あちらです。
+" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="しゅっくち " />
+<Answer2 content="でくち " />
+<Answer3 content="でぐち" />
+<Answer4 content="" />
+</Question>
+
+<Question id="8" form="0" kind="null" content="<u>外国<u/>に　りょこうに　いきたいです。
+" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="がいこく " />
+<Answer2 content="かいくに " />
+<Answer3 content="かいこく" />
+<Answer4 content="" />
+</Question>
+
+<Question id="9" form="0" kind="null" content="すずきさんに　<u>お金<u/>を　かしました。
+" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="おぎん " />
+<Answer2 content="おかね " />
+<Answer3 content="おがね" />
+<Answer4 content="" />
+</Question>
+
+<Question id="10" form="0" kind="null" content=" つぎは　<u>木よう日<u/>に　きて　ください。
+" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="もくようび " />
+<Answer2 content="すいようび " />
+<Answer3 content="すいようひ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="11" form="0" kind="null" content=" この　コートは　<u>十万<u/>えん　しました。
+
+
+" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ちゅまん" />
+<Answer2 content="じゅまん" />
+<Answer3 content="じゅうまん" />
+<Answer4 content="" />
+</Question>
+
+<Question id="12" form="0" kind="null" content=" いすに　すわらないで、<u>たって<u/>　ください。
+
+" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="足って" />
+<Answer2 content="土って" />
+<Answer3 content="立って" />
+<Answer4 content="" />
+</Question>
+
+<Question id="13" form="0" kind="null" content="この　くには　あめが　<u>すくない<u/>。
+
+
+" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="少ない" />
+<Answer2 content="大ない" />
+<Answer3 content="火ない" />
+<Answer4 content="" />
+</Question>
+
+<Question id="14" form="0" kind="null" content="<u>ねくたい<u/>を　かいに　いきました。
+
+
+" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="衤ケタイ" />
+<Answer2 content="不クタイ" />
+<Answer3 content="ネクタイ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="15" form="0" kind="null" content=" うみで、<u>さかな<u/>を　とりました。
+" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="角 " />
+<Answer2 content="勇 " />
+<Answer3 content="魚" />
+<Answer4 content="" />
+</Question>
+
+<Question id="16" form="0" kind="null" content="みなさん、あたまを　<u>あげて<u/>　ください。
+
+
+" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="土げて" />
+<Answer2 content="上げて" />
+<Answer3 content="下げて" />
+<Answer4 content="" />
+</Question>
+
+<Question id="17" form="0" kind="null" content=" この　<u>どあ<u/>は　あけないで　ください。
+
+" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ドワ" />
+<Answer2 content=" ドマ" />
+<Answer3 content="ドア" />
+<Answer4 content="" />
+</Question>
+
+<Question id="18" form="0" kind="null" content="のどが　かわきました。おちゃを　<u>のみ<u/>ませんか。
+
+
+" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="食み" />
+<Answer2 content="飯み" />
+<Answer3 content="飲み" />
+<Answer4 content="" />
+</Question>
+
+<Question id="19" form="0" kind="null" content=" せんせいの　<u>はな<u/>しを　よく　ききましょう。
+
+
+" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="話" />
+<Answer2 content="読" />
+<Answer3 content="語" />
+<Answer4 content="" />
+</Question>
+
+</QuestionContainer>

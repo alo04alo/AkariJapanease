@@ -22,11 +22,12 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_layout);
 		FileManager.create(getApplication());
-		database = new DatabaseHandler(this);		
-		if(database.checkDatabaseExist() == false){
+		database = new DatabaseHandler(this);	
+		database.getWritableDatabase();
+//		if(database.checkDatabaseExist() == false){
 			this.insertDb();
 			Debug.out("Insert data from xls file to DB successfully");
-		}
+//		}
 		Debug.out("Hello");
 		
 //		database = new DatabaseHandler(getApplication());
@@ -80,7 +81,7 @@ public class MainActivity extends Activity {
 			public void onClick(View view) {
 				Intent i = new Intent(getApplicationContext(),
 						KatakanaActivity.class);
-				((N5Support) getApplication()).setForm(0);
+				((N5Support) getApplication()).setForm(1);
 				((N5Support) getApplication()).setKind(0);
 				startActivity(i);
 			}
@@ -125,15 +126,12 @@ public class MainActivity extends Activity {
 	}
 
 	 public void insertDb() {
-		  Xml xml = FileManager.loadXmlFromHome("data.xml");
+		  Xml xml = FileManager.loadXmlFromHome("data4.xml");
 		  if (xml == null)
 		   return;
 		  Xml questionXml = xml.getChild("Question");
 		  Xml question = this.nextQuestion(questionXml);
-//		  while(question != null){
-//		   question = this.nextQuestion(questionXml);
-//		  }
-		  while(question != null){
+		  while (question != null) {
 			   question = this.nextQuestion(question);
 		  }
 		 }
@@ -144,13 +142,11 @@ public class MainActivity extends Activity {
 		String answer1 = "";
 		String answer2 = "";
 		String answer3 = "";
-		String answer4 = "";
-//		int id = 0;
+		String answer4 = "";		
 		int form = 0;
 		int result = 0;
 		if (questionXml != null) {
 			content = questionXml.getAttrib("content");
-//			id = Integer.parseInt(questionXml.getAttrib("id"));
 			form = Integer.parseInt(questionXml.getAttrib("form"));
 			result = Integer.parseInt(questionXml.getAttrib("correctAnswer"));
 			Xml answer1Xml = questionXml.getChild("Answer1");
@@ -162,18 +158,13 @@ public class MainActivity extends Activity {
 			Xml answer4Xml = questionXml.getChild("Answer4");
 			answer4 = answer4Xml.getAttrib("content");
 		}
-		// int id, int form, int kind, String content, int result,
-		// String answer1, String answer2, String answer3, String note, int
-		// count
+		
 		Question qu = new Question(form, 0, content, result, answer1,
 				answer2, answer3, "", 0);
 		Debug.out(answer4);
-		database.addQuestion(qu);
-//		if (questionXml == null)
-//			return null;
-//		if (questionXml.getNext() != null)
-//			return questionXml.getNext();
-//		return questionXml;
+		if (database.checkExistQuestion(content) == false) {
+			database.addQuestion(qu);
+		}		
 		if (questionXml == null)
 			   return null;
 		return questionXml.getNext();

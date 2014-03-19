@@ -69,7 +69,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
 		this.onCreate(db);
 	}
-
+	
 	public synchronized void close() {
 		if (myDB != null)
 			myDB.close();
@@ -264,5 +264,27 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		values.put(COUNT, question.getCount() + 1);
 		return myDB.update(TABLE_NAME, values, ID + " = ?",
 				new String[] { String.valueOf(question.getId()) });
+	}
+	
+	public boolean checkExistQuestion(String content){
+		SQLiteDatabase db = this.getReadableDatabase();
+		char c = '"';
+		String sql =  "select * from " + TABLE_NAME + " where " + CONTENT + " = "  + c + content + c ;
+		Debug.out(sql);
+		Cursor cursor = null;
+		try {
+			cursor = db.rawQuery(sql, null);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		if(cursor.getCount() > 0){
+			Debug.out("This record is exist in database !!!");
+			return true;
+		}else{
+			Debug.out("This record is not exist in database !!!");
+			return false;
+		}
 	}
 }
