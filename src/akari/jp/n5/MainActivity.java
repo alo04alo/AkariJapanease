@@ -1,11 +1,6 @@
 package akari.jp.n5;
 
-import akari.jp.base.DatabaseHandler;
-import akari.jp.base.FileManager;
-import akari.jp.base.Question;
 import akari.jp.base.QuestionHandler;
-import akari.jp.base.Xml;
-import akari.jp.utils.Debug;
 import android.os.Bundle;
 import android.app.Activity;
 
@@ -14,24 +9,12 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
-	DatabaseHandler database;
 	QuestionHandler questionHandle;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_layout);
-		FileManager.create(getApplication());
-		database = new DatabaseHandler(this);		
-		if(database.checkDatabaseExist() == false){
-			this.insertDb();
-			Debug.out("Insert data from xls file to DB successfully");
-		}
-		Debug.out("Hello");
-		
-//		database = new DatabaseHandler(getApplication());
-//		database.checkAndCopyDatabase();
-//		database.openDataBase();
 		/**
 		 * Creating all buttons instances
 		 * */
@@ -102,7 +85,6 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View view) {
-				// Launching News Feed Screen
 				Intent i = new Intent(getApplicationContext(),
 						PracticeActivity.class);
 				((N5Support) getApplication()).setForm(0);
@@ -124,58 +106,4 @@ public class MainActivity extends Activity {
 		});
 	}
 
-	 public void insertDb() {
-		  Xml xml = FileManager.loadXmlFromHome("data.xml");
-		  if (xml == null)
-		   return;
-		  Xml questionXml = xml.getChild("Question");
-		  Xml question = this.nextQuestion(questionXml);
-//		  while(question != null){
-//		   question = this.nextQuestion(questionXml);
-//		  }
-		  while(question != null){
-			   question = this.nextQuestion(question);
-		  }
-		 }
-
-	private Xml nextQuestion(Xml questionXml) {
-		Debug.out("Hello next");
-		String content = "";
-		String answer1 = "";
-		String answer2 = "";
-		String answer3 = "";
-		String answer4 = "";
-//		int id = 0;
-		int form = 0;
-		int result = 0;
-		if (questionXml != null) {
-			content = questionXml.getAttrib("content");
-//			id = Integer.parseInt(questionXml.getAttrib("id"));
-			form = Integer.parseInt(questionXml.getAttrib("form"));
-			result = Integer.parseInt(questionXml.getAttrib("correctAnswer"));
-			Xml answer1Xml = questionXml.getChild("Answer1");
-			answer1 = answer1Xml.getAttrib("content");
-			Xml answer2Xml = questionXml.getChild("Answer2");
-			answer2 = answer2Xml.getAttrib("content");
-			Xml answer3Xml = questionXml.getChild("Answer3");
-			answer3 = answer3Xml.getAttrib("content");
-			Xml answer4Xml = questionXml.getChild("Answer4");
-			answer4 = answer4Xml.getAttrib("content");
-		}
-		// int id, int form, int kind, String content, int result,
-		// String answer1, String answer2, String answer3, String note, int
-		// count
-		Question qu = new Question(form, 0, content, result, answer1,
-				answer2, answer3, "", 0);
-		Debug.out(answer4);
-		database.addQuestion(qu);
-//		if (questionXml == null)
-//			return null;
-//		if (questionXml.getNext() != null)
-//			return questionXml.getNext();
-//		return questionXml;
-		if (questionXml == null)
-			   return null;
-		return questionXml.getNext();
-	}
 }

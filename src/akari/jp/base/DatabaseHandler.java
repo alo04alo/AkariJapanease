@@ -16,17 +16,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-	// Database Version
 	private static final int DATABASE_VERSION = 1;
-	// Database Name
 	private static final String DATABASE_NAME = "QuestionN5DB.sqlite";
-
-	// Questions table name
 	private static final String TABLE_NAME = "questions";
-
-	// Database path
 	private static final String DATABASE_PATH = "/data/data/akari.jp.n5/databases/";
-	// Questions Table Columns names
+	private SQLiteDatabase myDB;
+	private final Context ctx;
+	public static final String TAG = "Database";
+	private String sql;
+	
 	private static final String ID = "id";
 	private static final String FORM = "form";
 	private static final String KIND = "kind";
@@ -46,12 +44,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			+ ANSWER1 + " TEXT," + ANSWER2 + " TEXT," + ANSWER3 + " TEXT,"
 			+ NOTE + " TEXT," + COUNT + " INTEGER" + ")";
 
-	private SQLiteDatabase myDB;
-	private final Context ctx;
-	public static final String TAG = "Database";
-
-	private String sql;
-
 	public DatabaseHandler(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 		this.ctx = context;
@@ -59,8 +51,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		// Create Database at here
-
 		db.execSQL(CREATE_TABLE_QUESTIONS);
 	}
 
@@ -137,57 +127,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 					SQLiteDatabase.OPEN_READWRITE);
 			return myDB;
 		} catch (Exception e) {
-			// TODO: handle exception
-//			Log.d(TAG, "Can't open database");
 			Debug.out("Can't open database");
 			return null;
 		}
 
 	}
 
-	public void addQuestion(Question question) {
-		SQLiteDatabase db = this.getWritableDatabase();
-		// D, FORM, KIND, CONTENT, RESULT, ANSWER1, ANSWER2, ANSWER3, NOTE,
-		// COUNT
-		ContentValues values = new ContentValues();
-//		values.put(ID, question.getId());
-		values.put(FORM, question.getForm());
-		values.put(KIND, question.getKind());
-		values.put(CONTENT, question.getContent());
-		values.put(RESULT, question.getResult());
-		values.put(ANSWER1, question.getAnswer1());
-		values.put(ANSWER2, question.getAnswer2());
-		values.put(ANSWER3, question.getAnswer3());
-		values.put(NOTE, question.getNote());
-		values.put(COUNT, 0);
-		// put next components of question at here...
-		Debug.out(question.getContent());
-		db.insert(TABLE_NAME, null, values);
-		db.close();
-	}
-
-	public Question getQuestion(int id) {
-		SQLiteDatabase db = this.getReadableDatabase();
-
-		Cursor cursor = db.query(TABLE_NAME, COLUMNS, "id = ?",
-				new String[] { String.valueOf(id) }, null, null, null, null);
-
-		if (cursor != null)
-			cursor.moveToFirst();
-		Question question = new Question();
-		question.setId(Integer.parseInt(cursor.getString(0)));
-		question.setForm(Integer.parseInt(cursor.getString(1)));
-		question.setKind(Integer.parseInt(cursor.getString(2)));
-		// set next components of question at here...
-
-		return question;
-	}
-
-	/**
-	 * 
-	 * @param id
-	 * @return a question
-	 */
 	public Question getOneQuestion(int id) {
 		Cursor cursor = null;
 		try {
@@ -221,7 +166,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	 */
 	public Question[] getQuestion(int form, int kind, int limit) {
 		Question[] questions = new Question[limit];
-		// get questions at here
 		sql = "select * from " + TABLE_NAME + " where form = " + form
 				+ " and kind = " + kind + " order by count asc limit 0,"
 				+ limit;
@@ -253,9 +197,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 					i++;
 				} while (cusor.moveToNext());
 			}
-			// cusor.close();
 		}
-		// myDB.close();
 		return questions;
 	}
 

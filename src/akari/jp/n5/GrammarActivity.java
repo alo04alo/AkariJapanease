@@ -67,6 +67,7 @@ public class GrammarActivity extends Activity {
 		btnGoToHome = (Button) findViewById(R.id.btn_home);
 
 		defineVariable = new DefineVariable();
+		
 		database = new DatabaseHandler(getApplication());
 		database.openDataBase();
 		questions = database.getQuestion(form, kind,
@@ -209,7 +210,6 @@ public class GrammarActivity extends Activity {
 	public void onBackPressed() {
 		super.onBackPressed();
 		startActivity(new Intent(ctx, MainActivity.class));
-		// finishStudy();
 		finish();
 	}
 
@@ -223,7 +223,6 @@ public class GrammarActivity extends Activity {
 
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						// TODO Auto-generated method stub
 						dialogShowResult = createDialogResult();
 						dialogShowResult.show();
 					}
@@ -234,7 +233,6 @@ public class GrammarActivity extends Activity {
 
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						// TODO Auto-generated method stub
 						dialog.cancel();
 					}
 				});
