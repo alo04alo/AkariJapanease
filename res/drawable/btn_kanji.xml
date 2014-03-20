@@ -1,13 +1,13 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/friends_pressed"
+    <item android:drawable="@drawable/kanji_press"
         android:state_focused="true"
         android:state_pressed="true" />
-    <item android:drawable="@drawable/friends_pressed"
+    <item android:drawable="@drawable/kanji_press"
         android:state_focused="false"
         android:state_pressed="true" />
-    <item android:drawable="@drawable/friends_selected" 
+    <item android:drawable="@drawable/kanji_select" 
         android:state_focused="true" />
-    <item android:drawable="@drawable/friends_default"
+    <item android:drawable="@drawable/kanji_default"
         android:state_focused="false"
         android:state_pressed="false" />
 </selector>
