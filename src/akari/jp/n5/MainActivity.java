@@ -23,10 +23,10 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.home_layout);
 		FileManager.create(getApplication());
 		database = new DatabaseHandler(this);		
-		if(database.checkDatabaseExist() == false){
-			this.insertDb();
-			Debug.out("Insert data from xls file to DB successfully");
-		}
+//		if(database.checkDatabaseExist() == false){
+//			this.insertDb();
+//			Debug.out("Insert data from xls file to DB successfully");
+//		}
 		Debug.out("Hello");
 		
 //		database = new DatabaseHandler(getApplication());
@@ -92,7 +92,7 @@ public class MainActivity extends Activity {
 			public void onClick(View view) {
 				Intent i = new Intent(getApplicationContext(),
 						ListeningActivity.class);
-				((N5Support) getApplication()).setForm(0);
+				((N5Support) getApplication()).setForm(4);
 				((N5Support) getApplication()).setKind(0);
 				startActivity(i);
 			}
@@ -166,8 +166,8 @@ public class MainActivity extends Activity {
 		// String answer1, String answer2, String answer3, String note, int
 		// count
 		Question qu = new Question(form, 0, content, result, answer1,
-				answer2, answer3, "", 0);
-		Debug.out(answer4);
+				answer2, answer3, "", 0, "");
+		Debug.out(answer4); 
 		database.addQuestion(qu);
 //		if (questionXml == null)
 //			return null;
