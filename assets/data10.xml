@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuestionContainer xmlns:hust="http://schemas.soict.hust.edu.vn">
+
+<Question id="0" form="0" kind="null" content="<u>今月<u/>のいつかにさとうさんとはなしをしました。 " correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="こがつ" />
+<Answer2 content="こげつ" />
+<Answer3 content="こんげつ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="1" form="0" kind="null" content="こんげつの<u>五日<u/>にさとうさんとはなしをしました。 " correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ごにち" />
+<Answer2 content="いつか" />
+<Answer3 content="いっか" />
+<Answer4 content="" />
+</Question>
+
+<Question id="2" form="0" kind="null" content="こんげつのいつかにさとうさんと<u>話<u/>をしました。 " correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="はねし" />
+<Answer2 content="はなし" />
+<Answer3 content="はのし" />
+<Answer4 content="" />
+</Question>
+
+<Question id="3" form="0" kind="null" content="<u>天気<u/>がいいから、じゅぎょうのあとで、そとでテニスをしましょう。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="てんき" />
+<Answer2 content="でんき" />
+<Answer3 content="けんき" />
+<Answer4 content="" />
+</Question>
+
+<Question id="4" form="0" kind="null" content="てんきがいいから、じゅぎょうの<u>後で<u/>、そとでテニスをしましょう。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="うしろで" />
+<Answer2 content="こうで" />
+<Answer3 content="あとで" />
+<Answer4 content="" />
+</Question>
+
+<Question id="5" form="0" kind="null" content="てんきがいいから、じゅぎょうのあとで、<u>外<u/>でテニスをしましょう。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="うち" />
+<Answer2 content="よこ" />
+<Answer3 content="そと" />
+<Answer4 content="" />
+</Question>
+
+<Question id="6" form="0" kind="null" content="<u>銀行<u/>は、このみちをにしはよんキロいってひだりがわにあります。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ぎんこ" />
+<Answer2 content="ぎんこう" />
+<Answer3 content="ぎんきょ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="7" form="0" kind="null" content="ぎんこうは、この<u>道<u/>をにしはよんキロいってひだりがわにあります。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="まち" />
+<Answer2 content="かど" />
+<Answer3 content="みち" />
+<Answer4 content="" />
+</Question>
+
+<Question id="8" form="0" kind="null" content="ぎんこうは、このみちをにしは<u>四キロ<u/>いってひだりがわにあります。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="にしキロ" />
+<Answer2 content="しちキロ" />
+<Answer3 content="よんキロ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="9" form="0" kind="null" content="ぎんこうは、このみちをにしはよんキロいって<u>左<u/>がわにあります。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="みぎ" />
+<Answer2 content="みき" />
+<Answer3 content="ひだり" />
+<Answer4 content="" />
+</Question>
+
+<Question id="10" form="0" kind="null" content="がくせいは<u>手<u/>をあげてしつもんします。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="て" />
+<Answer2 content="け" />
+<Answer3 content="め" />
+<Answer4 content="" />
+</Question>
+
+<Question id="11" form="0" kind="null" content="がくせいはてを<u>上げて<u/>しつもんします。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="まげて" />
+<Answer2 content="なげて" />
+<Answer3 content="あげて" />
+<Answer4 content="" />
+</Question>
+
+<Question id="12" form="0" kind="null" content="かばんから、おかねを<u>三万円<u/>だしました。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="さんまんねん" />
+<Answer2 content="さんまんえん" />
+<Answer3 content="さんまねん" />
+<Answer4 content="" />
+</Question>
+
+<Question id="13" form="0" kind="null" content="かばんから、おかねをさんまんえん<u>出しました<u/>。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="だしました" />
+<Answer2 content="けしました" />
+<Answer3 content="かしました" />
+<Answer4 content="" />
+</Question>
+
+<Question id="14" form="0" kind="null" content="<u>ぽけっと<u/>にはんかちをいれました。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ポクット " />
+<Answer2 content="ポケット" />
+<Answer3 content="オクット" />
+<Answer4 content="" />
+</Question>
+
+<Question id="15" form="0" kind="null" content="ぽけっとに<u>はんかち<u/>をいれました。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ルンカチ" />
+<Answer2 content="ルソカチ" />
+<Answer3 content="ハンカチ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="16" form="0" kind="null" content="ぽけっとにはんかちを<u>いれました<u/>。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="八れました" />
+<Answer2 content="メれました " />
+<Answer3 content="入れました" />
+<Answer4 content="" />
+</Question>
+
+<Question id="17" form="0" kind="null" content="<u>すいようび<u/>はがっこうでおべんとうをたべます。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="不よう日" />
+<Answer2 content="氷よう日 " />
+<Answer3 content="水よう日" />
+<Answer4 content="" />
+</Question>
+
+<Question id="18" form="0" kind="null" content="すいようびは<u>がっこう<u/>でおべんとうをたべます。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="学校" />
+<Answer2 content="党校 " />
+<Answer3 content="学抗" />
+<Answer4 content="" />
+</Question>
+
+<Question id="19" form="0" kind="null" content="すいようびはがっこうでおべんとうを<u>たべます<u/>。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="倉べます " />
+<Answer2 content="食べます" />
+<Answer3 content="庫べます" />
+<Answer4 content="" />
+</Question>
+
+<Question id="20" form="0" kind="null" content="わたしは<u>きた<u/>のくにでうまれました。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="非 " />
+<Answer2 content="北 " />
+<Answer3 content="化 " />
+<Answer4 content="" />
+</Question>
+
+<Question id="21" form="0" kind="null" content="わたしはきたのくにで<u>うまれました<u/>。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="生まれました" />
+<Answer2 content="主まれました" />
+<Answer3 content="佳まれました" />
+<Answer4 content="" />
+</Question>
+
+<Question id="22" form="0" kind="null" content="<u>ながい<u/>じかんでんしゃにのりました。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="表い" />
+<Answer2 content="長い" />
+<Answer3 content="青い" />
+<Answer4 content="" />
+</Question>
+
+<Question id="23" form="0" kind="null" content="ながいじかん<u>でんしゃ<u/>にのりました。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="電車" />
+<Answer2 content="電卓 " />
+<Answer3 content="雷車" />
+<Answer4 content="" />
+</Question>
+
+<Question id="24" form="0" kind="null" content="かぜを_____、かいしゃをやすみました。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="やって" />
+<Answer2 content="なって" />
+<Answer3 content="ｖ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="25" form="0" kind="null" content="それはとても_____もんだいです。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="たいせつな" />
+<Answer2 content="いろいろな" />
+<Answer3 content="じょうぶな" />
+<Answer4 content="" />
+</Question>
+
+<Question id="26" form="0" kind="null" content="さとうさんは_____こないでしょう。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ちょうど" />
+<Answer2 content="すこし " />
+<Answer3 content="たぶん" />
+<Answer4 content="" />
+</Question>
+
+<Question id="27" form="0" kind="null" content="くるまでうちからびょういんまで２０ぷん_____。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="かけます" />
+<Answer2 content="かかります" />
+<Answer3 content="いります" />
+<Answer4 content="" />
+</Question>
+
+<Question id="28" form="0" kind="null" content="さむくなったから、_____をつけてください。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="スリッパ " />
+<Answer2 content="コート" />
+<Answer3 content="ストーブ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="29" form="0" kind="null" content="やまだ「このほん、どうもありがとうございました。」
+たなか「いいえ、_____。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="どういたしまして" />
+<Answer2 content="ごちそうさまでした" />
+<Answer3 content="おねがいします" />
+<Answer4 content="" />
+</Question>
+
+<Question id="30" form="0" kind="null" content="このぎゅうにゅうはれいぞこにいれてありました。とても_____。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ひくいです" />
+<Answer2 content="つめたいです" />
+<Answer3 content="さむいです " />
+<Answer4 content="" />
+</Question>
+
+<Question id="31" form="0" kind="null" content="あの_____をわたって、だいがくへいきます。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="もん" />
+<Answer2 content="まど" />
+<Answer3 content="はし" />
+<Answer4 content="" />
+</Question>
+
+<Question id="32" form="0" kind="null" content="ふうとうにきってを　　。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="とります" />
+<Answer2 content="かります" />
+<Answer3 content="はります" />
+<Answer4 content="" />
+</Question>
+
+<Question id="33" form="0" kind="null" content="きょうはたくさんしごとをしたから、とても_____。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="つかれました " />
+<Answer2 content="つくりました" />
+<Answer3 content="つかいました" />
+<Answer4 content="" />
+</Question>
+
+<Question id="34" form="0" kind="null" content="そのドアはあいています。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="そのドアはしまっていません。" />
+<Answer2 content="そのドアはしめてあります。" />
+<Answer3 content="そのドアはあきません。" />
+<Answer4 content="" />
+</Question>
+
+<Question id="35" form="0" kind="null" content="じしょをひきました。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="じかんがわかりました。" />
+<Answer2 content="でぐちがわかりました。" />
+<Answer3 content="ことばのいみがわかりました。" />
+<Answer4 content="" />
+</Question>
+
+<Question id="36" form="0" kind="null" content="わたしはあのおとこのこのあねです。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="あのおとこのこはわたしのあにです。" />
+<Answer2 content="あのおとこのこはわたしのちちです。" />
+<Answer3 content="あのおとこのこはわたしのおとうとです。" />
+<Answer4 content="" />
+</Question>
+
+<Question id="37" form="0" kind="null" content="ここはきっさてんです。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ここはさんぽしたりはしったりするところです。" />
+<Answer2 content="ここはみずをあびたりおよいだりするところです。" />
+<Answer3 content="ここはコーヒーをのんだりひととはなしたりするところです。" />
+<Answer4 content="" />
+</Question>
+
+<Question id="38" form="0" kind="null" content="きのうりんごをみっつかいました。そして、きょうりんごをむっつかいました。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="ぜんぶでりんごをななつかいました。" />
+<Answer2 content="ぜんぶでりんごをやっつかいました。" />
+<Answer3 content="ぜんぶでりんごをここのつかいました。" />
+<Answer4 content="" />
+</Question>
+
+</QuestionContainer>

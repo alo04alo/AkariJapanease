@@ -126,7 +126,7 @@ public class MainActivity extends Activity {
 	}
 
 	 public void insertDb() {
-		  Xml xml = FileManager.loadXmlFromHome("data4.xml");
+		  Xml xml = FileManager.loadXmlFromHome("data17.xml");
 		  if (xml == null)
 		   return;
 		  Xml questionXml = xml.getChild("Question");

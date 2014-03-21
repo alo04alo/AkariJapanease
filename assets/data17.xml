@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuestionContainer xmlns:hust="http://schemas.soict.hust.edu.vn">
+
+<Question id="0" form="1" kind="null" content=" もう　いちど　<u>言って<u/>　ください。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="いって" />
+<Answer2 content="きって" />
+<Answer3 content="まって" />
+<Answer4 content="" />
+</Question>
+
+<Question id="1" form="1" kind="null" content="ちかくに　<u>山<u/>が　あります。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="かわ" />
+<Answer2 content="やま" />
+<Answer3 content="いけ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="2" form="1" kind="null" content="この　ホテルは　へやが<u>多い<u/>です。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="すくない" />
+<Answer2 content="おおい" />
+<Answer3 content="せまい" />
+<Answer4 content="" />
+</Question>
+
+<Question id="3" form="1" kind="null" content="ともだちと　いっしょに　<u>学校<u/>に　いきます。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="がこう　" />
+<Answer2 content="がこお" />
+<Answer3 content="がっこう" />
+<Answer4 content="" />
+</Question>
+
+<Question id="4" form="1" kind="null" content="ごはんの　<u>後<u/>で　さんぽします。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="つぎ" />
+<Answer2 content="うしろ" />
+<Answer3 content="あと" />
+<Answer4 content="" />
+</Question>
+
+<Question id="5" form="1" kind="null" content="<u>先週<u/>　デパートに　かいものに　いきました。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="せんしゅ" />
+<Answer2 content="せんしゅう" />
+<Answer3 content="ぜんしゅう" />
+<Answer4 content="" />
+</Question>
+
+<Question id="6" form="1" kind="null" content="この　<u>新聞<u/>は　いくらですか" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="しんむん" />
+<Answer2 content="しんぶん" />
+<Answer3 content="しむん　" />
+<Answer4 content="" />
+</Question>
+
+<Question id="7" form="1" kind="null" content="この　カメラは　<u>安い<u/>です。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="たかい　　" />
+<Answer2 content="やすい　" />
+<Answer3 content="おもい" />
+<Answer4 content="" />
+</Question>
+
+<Question id="8" form="1" kind="null" content=" かさは　<u>外<u/>に　あります。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="いえ" />
+<Answer2 content="なか" />
+<Answer3 content="そと" />
+<Answer4 content="" />
+</Question>
+
+<Question id="9" form="1" kind="null" content=" まいあさ、<u>電車<u/>に　のります。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="でんじゃ" />
+<Answer2 content="てんちゃ" />
+<Answer3 content="でんしゃ" />
+<Answer4 content="" />
+</Question>
+
+<Question id="10" form="1" kind="null" content="そとに　<u>男<u/>が　さんにん　います。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="おどこ" />
+<Answer2 content="おとこ" />
+<Answer3 content="おとこう" />
+<Answer4 content="" />
+</Question>
+
+<Question id="11" form="1" kind="null" content="  コーヒー　を　<u>のみました<u/>。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="飯みました　" />
+<Answer2 content="飲みました" />
+<Answer3 content="餃みました　" />
+<Answer4 content="" />
+</Question>
+
+<Question id="12" form="1" kind="null" content=" あたらしい　<u>くるま<u/>を　かいました" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="早" />
+<Answer2 content="車" />
+<Answer3 content="軍" />
+<Answer4 content="" />
+</Question>
+
+<Question id="13" form="1" kind="null" content="この　ぼうしは　<u>１０００えん<u/>です。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="１０００内　" />
+<Answer2 content="１０００用" />
+<Answer3 content="１０００円" />
+<Answer4 content="" />
+</Question>
+
+<Question id="14" form="1" kind="null" content=" もう　いちど　<u>言って<u/>　ください。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="いって" />
+<Answer2 content="きって" />
+<Answer3 content="まって" />
+<Answer4 content="" />
+</Question>
+
+<Question id="15" form="1" kind="null" content="しゅくだいが　<u>はんぶん<u/>　おわりました。" correctAnswer="1" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="羊扮" />
+<Answer2 content="半扮" />
+<Answer3 content="羊分" />
+<Answer4 content="" />
+</Question>
+
+<Question id="16" form="1" kind="null" content=" わたしの　うちに　<u>きませんか。<u/>" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="来ませんか" />
+<Answer2 content="釆ませんか" />
+<Answer3 content="木ませんか" />
+<Answer4 content="" />
+</Question>
+
+<Question id="17" form="1" kind="null" content="きのう　たなかさんと　<u>あいました<u/>。" correctAnswer="2" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="見いました" />
+<Answer2 content="書いました" />
+<Answer3 content="会いました" />
+<Answer4 content="" />
+</Question>
+
+<Question id="18" form="1" kind="null" content=" いもうとと　<u>おなじ<u/>　ふくを　かいました。" correctAnswer="0" >
+<LocalResources>
+</LocalResources>
+<Answer1 content="同じ" />
+<Answer2 content="回じ" />
+<Answer3 content="冋じ" />
+<Answer4 content="" />
+</Question>
+
+</QuestionContainer>
