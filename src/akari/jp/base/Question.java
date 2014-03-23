@@ -12,14 +12,14 @@ public class Question {
 	private String answer3;
 	private String note;
 	private int count;
-
+	private String resource;
 	public Question() {
 
 	}
 
 	public Question(int id, int form, int kind, String content, int result,
 			String answer1, String answer2, String answer3, String note,
-			int count) {
+			int count, String resource) {
 		this.id = id;
 		this.form = form;
 		this.kind = kind;
@@ -30,11 +30,12 @@ public class Question {
 		this.result = result;
 		this.note = note;
 		this.count = count;
+		this.resource = resource;
 	}
 	
 	public Question(int form, int kind, String content, int result,
 			String answer1, String answer2, String answer3, String note,
-			int count) {
+			int count, String resource) {
 		this.form = form;
 		this.kind = kind;
 		this.answer1 = answer1;
@@ -44,9 +45,9 @@ public class Question {
 		this.result = result;
 		this.note = note;
 		this.count = count;
+		this.resource = resource;
 	}
 
-	// get, set data at here
 	public int getId() {
 		return this.id;
 	}
@@ -133,6 +134,14 @@ public class Question {
 
 	public int getCount() {
 		return this.count;
+	}
+		
+	public String getResource() {
+		return resource;
+	}
+
+	public void setResource(String resource) {
+		this.resource = resource;
 	}
 
 	public String getContentofAnswer(int id) {
