@@ -1,49 +1,55 @@
-<akari.jp.utils.HomeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<akari.jp.utils.HomeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_weight="1"
     android:background="#f8f9fe" >
-	<!--  Grammar Button -->
-    <Button
-        android:id="@+id/btn_grammar"
-        style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn_grammar"
-        android:text="Grammar" />
-    
-	<!--  Kanji Button -->
-    <Button
-        android:id="@+id/btn_kanji"
-        style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn_kanji"
-        android:text="Kanji" />
-    
-	<!--  Katakana Button -->
+
+    <!-- Katakana Button -->
+
     <Button
         android:id="@+id/btn_katakana"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/btn_katakana"
         android:text="Katakana" />
-	
-    <!--  Listenning Button -->
+
+    <!-- Word Button -->
+
+    <Button
+        android:id="@+id/btn_word"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_word"
+        android:text="Vocabulary" />
+
+    <!-- Grammar Button -->
+
+    <Button
+        android:id="@+id/btn_grammar"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_grammar"
+        android:text="Grammar" />
+
+    <!-- Listenning Button -->
+
     <Button
         android:id="@+id/btn_listening"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/btn_listening"
         android:text="Listening" />
 
-    <!--  Practice Button -->
+    <!-- Practice Button -->
+
     <Button
         android:id="@+id/btn_practice"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/btn_pracice"
         android:text="Practice" />
 
-    <!--  Word Button -->
+    <!-- Kanji Button -->
+
     <Button
-        android:id="@+id/btn_word"
+        android:id="@+id/btn_kanji"
         style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn_word"
-        android:text="Word" />
+        android:drawableTop="@drawable/btn_kanji"
+        android:text="Kanji" />
 
 </akari.jp.utils.HomeLayout>

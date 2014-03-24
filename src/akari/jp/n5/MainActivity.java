@@ -1,6 +1,9 @@
 package akari.jp.n5;
 
+import akari.jp.base.DatabaseHandler;
+import akari.jp.base.FileManager;
 import akari.jp.base.QuestionHandler;
+import akari.jp.utils.Debug;
 import android.os.Bundle;
 import android.app.Activity;
 
@@ -9,12 +12,23 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
+	DatabaseHandler database;
 	QuestionHandler questionHandle;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_layout);
+		FileManager.create(getApplication());
+		database = new DatabaseHandler(this);		
+		if(database.checkDatabaseExist() == false){
+			Debug.out("Insert data from xls file to DB successfully");
+		}
+		Debug.out("Hello");
+		
+//		database = new DatabaseHandler(getApplication());
+//		database.checkAndCopyDatabase();
+//		database.openDataBase();
 		/**
 		 * Creating all buttons instances
 		 * */
