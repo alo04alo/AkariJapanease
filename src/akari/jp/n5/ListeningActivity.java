@@ -4,6 +4,7 @@ import akari.jp.base.CountUpTimer;
 import akari.jp.base.DatabaseHandler;
 import akari.jp.base.Question;
 import akari.jp.base.QuestionHandler;
+import akari.jp.utils.Debug;
 import akari.jp.utils.DefineVariable;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -11,11 +12,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -47,25 +45,28 @@ public class ListeningActivity extends Activity {
 	int score;
 		
 	Context ctx;
-
+	MediaPlayer media;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.question_layout);
+		
 		countUpTimer = new CountUpTimer();
 		form = ((N5Support) getApplication()).getForm();
 		kind = ((N5Support) getApplication()).getKind();
+		
 		txtQuestion = (TextView) findViewById(R.id.txt_question);
 		btnAnswer1 = (Button) findViewById(R.id.btn_result1);
 		btnAnswer2 = (Button) findViewById(R.id.btn_result2);
 		btnAnswer3 = (Button) findViewById(R.id.btn_result3);
+		
 		count = 0;
 		ctx = this;
+		media = new MediaPlayer();
 		defineVariable = new DefineVariable();
 		database = new DatabaseHandler(getApplication());
 		database.openDataBase();
-		questions = database.getQuestion(form, kind,
-				defineVariable.MAX_QUESTION);
+		questions = database.getQuestion(form, kind, defineVariable.MAX_QUESTION);
 		nextQuestion();
 		questionHandle = new QuestionHandler(questions);
 		countUpTimer.startTimer();
@@ -97,27 +98,26 @@ public class ListeningActivity extends Activity {
 		super.onStart();
 	}
 
-	private void setStyleText(TextView tv, String text) {
-		int start = text.indexOf(new String("<u>"));
-		int end = text.lastIndexOf(new String("<u/>")) - 3;
-		text = text.replace("<u>", "");
-		text = text.replace("<u/>", "");
-		Spannable wordtoSpan = new SpannableString(text);
-		// StyleSpan style = new StyleSpan(android.graphics.Typeface.ITALIC);
-		// wordtoSpan.setSpan(new UnderlineSpan(), start, end,
-		// Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-		wordtoSpan.setSpan(new ForegroundColorSpan(Color.BLUE), start, end,
-				Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-		tv.setText(wordtoSpan);
-	}
-
 	private void setText(Question question) {
-		// txtQuestion.setText(question.getContent());
-		setStyleText(txtQuestion, question.getContent());
 		btnAnswer1.setText(question.getAnswer1());
 		btnAnswer2.setText(question.getAnswer2());
 		btnAnswer3.setText(question.getAnswer3());
+		Debug.out(question.getResource());
+		audioPlayer(question.getResource());
+		
+	}
+	
+	private void audioPlayer(String fileName){
+		int resID = getResources().getIdentifier(fileName, "raw", getPackageName());
+		media = MediaPlayer.create(ctx, resID);
+		try {
+			media.seekTo(0);
+			media.start();
+			Runtime.getRuntime().gc();
+		} catch (Exception e) {
+			Debug.out("File is not exist");
+			e.printStackTrace();
+		}
 	}
 
 	private void nextQuestion() {
@@ -135,6 +135,7 @@ public class ListeningActivity extends Activity {
 		((N5Support) getApplication()).setScore(questionHandle.getScore());
 		((N5Support) getApplication()).setQuestions(questions);
 		((N5Support) getApplication()).setQuestionHandler(questionHandle);
+		media.stop();
 		score = ((N5Support) getApplication()).getScore();
 		countUpTimer.pauseTimer();
 		if (count < defineVariable.MAX_QUESTION) {
@@ -162,7 +163,6 @@ public class ListeningActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				startActivity(new Intent(ListeningActivity.this,
 						ListViewActivity.class));
 			}
@@ -172,7 +172,6 @@ public class ListeningActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				startActivity(new Intent(getApplicationContext(), MainActivity.class));
 			}
 		});
@@ -181,7 +180,6 @@ public class ListeningActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				startActivity(new Intent(ctx, ListeningActivity.class));
 			}
 		});
@@ -192,11 +190,10 @@ public class ListeningActivity extends Activity {
 
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
-		super.onBackPressed();
-		startActivity(new Intent(ctx, MainActivity.class));
-		// finishStudy();
-		finish();
+//		super.onBackPressed();
+//		startActivity(new Intent(ctx, MainActivity.class));
+//		finishStudy();
+//		finish();
 	}
 
 	private void showDialogSubmit() {
