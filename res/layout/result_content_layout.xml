@@ -7,19 +7,21 @@
     <TextView
         android:id="@+id/txtScore"
         android:layout_width="fill_parent"
-        android:layout_height="60sp"
-        android:gravity="center"
+        android:layout_height="40sp"
+        android:layout_marginTop="20dp"
         android:text="17"
         android:textColor="#08088A"
-        android:textSize="40sp" />
+        android:layout_marginLeft="20dp"
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/txtTime"
         android:layout_width="fill_parent"
-        android:layout_height="60sp"
-        android:gravity="center"
+        android:layout_height="40sp"
         android:text="17"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
         android:textColor="#08088A"
-        android:textSize="40sp" />
+        android:textSize="22sp" />
 
 </LinearLayout>

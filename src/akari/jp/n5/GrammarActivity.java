@@ -126,9 +126,10 @@ public class GrammarActivity extends Activity {
 		tv.setText(wordtoSpan);
 	}
 
-	private void setText(Question question) {
+	private void setText(Question question, int number) {
 		// txtQuestion.setText(question.getContent());
-		setStyleText(txtQuestion, question.getContent());
+		String questionContent = Integer.toString(number) + ".  "+ question.getContent();
+		setStyleText(txtQuestion, questionContent);
 		btnAnswer1.setText(question.getAnswer1());
 		btnAnswer2.setText(question.getAnswer2());
 		btnAnswer3.setText(question.getAnswer3());
@@ -138,7 +139,7 @@ public class GrammarActivity extends Activity {
 		if (count < defineVariable.MAX_QUESTION) {
 			question = questions[count];
 			database.updateOneQuestion(question);
-			this.setText(question);
+			this.setText(question, count + 1);
 			count++;
 		} else {
 			finishStudy();

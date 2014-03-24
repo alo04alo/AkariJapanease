@@ -11,7 +11,7 @@
     <application
         android:name="N5Support"
         android:theme="@android:style/Theme.NoTitleBar"
-        android:allowBackup="true">
+        android:allowBackup="true" android:icon="@drawable/logo" android:label="JLPT N5">
         <activity
             android:name="akari.jp.n5.MainActivity">
             <intent-filter>
