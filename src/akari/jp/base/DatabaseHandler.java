@@ -35,14 +35,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	private static final String ANSWER3 = "answer3";
 	private static final String NOTE = "note";
 	private static final String COUNT = "count";
+	private static final String RESOURCE = "resource";
 
 	private static final String[] COLUMNS = { ID, FORM, KIND, CONTENT, RESULT,
-			ANSWER1, ANSWER2, ANSWER3, NOTE, COUNT };
+			ANSWER1, ANSWER2, ANSWER3, NOTE, COUNT, RESOURCE };
 	private static final String CREATE_TABLE_QUESTIONS = "CREATE TABLE "
 			+ TABLE_NAME + "("+ ID + " INTEGER PRIMARY KEY," + FORM + " TEXT,"
 			+ KIND + " TEXT," + CONTENT + " TEXT," + RESULT + " INTEGER,"
 			+ ANSWER1 + " TEXT," + ANSWER2 + " TEXT," + ANSWER3 + " TEXT,"
-			+ NOTE + " TEXT," + COUNT + " INTEGER" + ")";
+			+ NOTE + " TEXT," + COUNT + " INTEGER," + RESOURCE + " TEXT" + ")";
 
 	public DatabaseHandler(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -154,6 +155,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				question.setAnswer3(cursor.getString(7));
 				question.setNote(cursor.getString(8));
 				question.setCount(cursor.getInt(9));
+				question.setResource(cursor.getString(10));
 
 			} while (cursor.moveToNext());
 		}
@@ -194,6 +196,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 							.getColumnIndex(NOTE)));
 					questions[i].setCount(cusor.getInt(cusor
 							.getColumnIndex(COUNT)));
+					questions[i].setResource(cusor.getString(cusor
+							.getColumnIndex(RESOURCE)));
 					i++;
 				} while (cusor.moveToNext());
 			}
