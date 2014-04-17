@@ -49,7 +49,7 @@ public class ListeningActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.question_layout);
+		setContentView(R.layout.listening_layout);
 		
 		countUpTimer = new CountUpTimer();
 		form = ((N5Support) getApplication()).getForm();
